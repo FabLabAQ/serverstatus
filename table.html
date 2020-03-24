@@ -1,0 +1,151 @@
+<script>
+	var url = "https://script.google.com/macros/s/YOURGOOGLESCRIPTURLHERE/exec?get=all";
+	var interval = setInterval(reqdata, 30000);
+	reqdata();
+	function callback(data) {
+		data = JSON.parse(data);
+		for (d in data) {
+			document.getElementById(d).style.backgroundColor = data[d];
+		}
+	}
+	function reqdata() {
+		var req = new XMLHttpRequest();
+		req.onreadystatechange = function () {
+			if (req.readyState == 4 && req.status == 200)
+				callback(req.responseText);
+		}
+		req.open("GET", url, true);
+		req.send(null);
+	}
+</script>
+<table style="border-collapse:collapse;border-spacing:0;margin:0px auto;table-layout: fixed; width: 210px; border: 2px solid black;" class="tg">
+	<colgroup>
+		<col style="width: 25px">
+		<col style="width: 25px">
+		<col style="width: 25px">
+		<col style="width: 25px">
+		<col style="width: 25px">
+		<col style="width: 25px">
+		<col style="width: 25px">
+		<col style="width: 25px">
+		<col style="width: 25px">
+		<col style="width: 25px">
+	</colgroup>
+	<tr>
+		<td style="font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10">Firewall</td>
+	</tr>
+	<tr>
+		<td id="firewall-1" style="height: 25px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="5">1</td>
+		<td id="firewall-2" style="height: 25px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="5">2</td>
+	</tr>
+	<tr>
+		<td style="height: 25px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10">Blade Servers 1</td>
+	</tr>
+	<tr>
+		<td id="blade-10" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			0</td>
+		<td id="blade-11" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			1</td>
+		<td id="blade-12" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			2</td>
+		<td id="blade-13" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			3</td>
+		<td id="blade-14" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			4</td>
+		<td id="blade-15" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			5</td>
+		<td id="blade-16" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			6</td>
+		<td id="blade-17" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			7</td>
+		<td id="blade-18" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			8</td>
+		<td id="blade-19" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			9</td>
+	</tr>
+	<tr>
+		<td style="height: 25px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10">Blade Servers 2</td>
+	</tr>
+	<tr>
+		<td id="blade-20" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			0</td>
+		<td id="blade-21" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			1</td>
+		<td id="blade-22" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			2</td>
+		<td id="blade-23" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			3</td>
+		<td id="blade-24" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			4</td>
+		<td id="blade-25" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			5</td>
+		<td id="blade-26" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			6</td>
+		<td id="blade-27" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			7</td>
+		<td id="blade-28" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			8</td>
+		<td id="blade-29" style="height: 100px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle">
+			9</td>
+	</tr>
+	<tr>
+		<td style="font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10"></td>
+	</tr>
+	<tr>
+		<td id="bootstrap" style="height: 25px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10">Bootstrap Server</td>
+	</tr>
+	<tr>
+		<td style="font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10"></td>
+	</tr>
+	<tr>
+		<td id="storage-1" style="height: 50px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10">Storage Server 1</td>
+	</tr>
+	<tr>
+		<td style="font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10"></td>
+	</tr>
+	<tr>
+		<td id="storage-2" style="height: 50px;font-family:Lucida Console, Monaco, monospace !important;;font-size:100%;padding:3px
+			3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ffffff;font-weight:bold;background-color:#ffffff;color:#000000;text-align:center;vertical-align:middle"
+			colspan="10">Storage Server 2</td>
+	</tr>
+</table>
